@@ -1,4 +1,4 @@
-## An Open Foundation Model for Chest Radiography
+## A Fully Open, AI Foundation Model Using Heterogeneous Labels Applied to Chest Radiography
 
 Due to the large size of the datasets, it is not feasible to upload the data and set up a reproducible run of pretraining and finetuning on CodeOcean. Instead, we provide a guideline for the experimental setup and the necessary running commands for **pretraining** and **finetuning**. 
 
@@ -40,7 +40,7 @@ Modify <PATH_TO_DATASET> in [datasets_config.yaml](./datasets_config.yaml) for e
 
 (To incorporate a new dataset, refer to the examples provided in datasets_config.yaml. Afterwards, create a corresponding dataloader for the dataset in [dataloader.py](./dataloader.py).)
 
-### Train an Ark model
+### Train an Ark+ model
 ```
 # Train Ark+ with six public datasets
 python main_ark.py --data_set MIMIC --data_set CheXpert --data_set ChestXray14 --data_set RSNAPneumonia --data_set VinDrCXR --data_set Shenzhen --opt sgd --warmup-epochs 20  --lr 0.3 --batch_size 50 --model swin_large_768 --init imagenet  --pretrain_epochs 200  --test_epoch 10 --pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_large_patch4_window12_384_22kto1k.pth --momentum_teacher 0.9  --projector_features 1376  --img_resize 896 --input_size 768

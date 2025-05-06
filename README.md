@@ -1,27 +1,37 @@
-<p align="center"><img width=15% alt="FrontCover" src="Ark_MICCAI2023/media/Ark_logo.png"></p>
+<h1 align="center"><b>Ark: Accruing and Reusing Knowledge</b></h1>
 
-# Foundation Ark: Accruing and Reusing Knowledge
+We develop **Open Foundation Models** from numerous public datasets using their heterogeneous expert annotations. 
 
-We develop **open Foundation Models** from numerous public datasets using their heterogeneous expert annotations. Our Ark models outperform SOTA fully/self-supervised methods on various thoracic disease classification tasks and organ/bones segmentation tasks. Ark offers embeddings with superior quality over [Google's CXR Foundation Model](https://github.com/Google-Health/imaging-research/tree/master/cxr-foundation).
-
+<p align="center"><img width=50% alt="FrontCover" src="Ark_MICCAI2023/media/ark.png"></p>
 
 ## Publication
+
+<b>A Fully Open AI Foundation Model Applied to Chest Radiography </b> <br/>
+[DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
+<sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
+<b>*Nature* (In Press, to appear in 2025)</b>
+
+[Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
+
+<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels for Superior and Robust Foundation Models </b> <br/>
+[DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
+<sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
+<b>*Medical Image Analysis* (Accepted)</b>
+
+
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
 [DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
 <sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
+<b>*International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/))*</b> (Oral + Poster)
 
-International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/)) (Oral + Poster)
-
-★ [Best Paper Award Runner-up](http://www.miccai.org/about-miccai/awards/best-paper-award-and-young-scientist-award/)
+🏆 [Best Paper Award Runner-up](http://www.miccai.org/about-miccai/awards/best-paper-award-and-young-scientist-award/)
 
 ★ [MICCAI 2023 STAR Awards](https://conferences.miccai.org/2023/en/MICCAI-2023-STudent-Author-Registration-(STAR)-Awards.html)
 
 [Paper](https://link.springer.com/chapter/10.1007/978-3-031-43907-0_62) ([PDF](https://rdcu.be/dnwdJ), [Arxiv](https://arxiv.org/abs/2310.09507)) | [Code](https://github.com/jlianglab/Ark) | [Poster](Ark_MICCAI2023/media/Ark_poster.pdf) | Oral Presentation ([YouTube](https://youtu.be/-gq1Zl-mh60), [BiliBili](https://www.bilibili.com/video/BV1ww411Y7Yv/))
 
-<p align="left"><img width=50% alt="FrontCover" src="Ark_MICCAI2023/media/BestPaperRunnerUp.JPG"></p>
+<p align="left"><img width=40% alt="FrontCover" src="Ark_MICCAI2023/media/BestPaperRunnerUp.JPG"></p>
 
-## Poster Presentation [[Youtube](https://www.youtube.com/watch?v=VWlbczuZN7E)] [[BiliBili](https://www.bilibili.com/video/BV14C4y1d7rR/)])
-[![Poster Presentation](media/Ark_poster.jpg)](https://www.youtube.com/watch?v=VWlbczuZN7E)
 
 ## Dataset
 1. [CheXpert](https://stanfordmlgroup.github.io/competitions/chexpert/)
@@ -32,50 +42,9 @@ International Conference on Medical Image Computing and Computer Assisted Interv
 6. [MIMIC](https://physionet.org/content/mimic-cxr/2.0.0/)
 
 
-## Code
-### Requirements
-+ Python
-+ PyTorch ([pytorch.org](http://pytorch.org))
-### Setup environment 
-Create and activate a Python 3 conda environment:
-```
-$ conda create -n ark python=3
-$ conda activate ark
-```
-Install PyTorch according to the [CUDA version](https://pytorch.org/get-started/previous-versions/) (e.g., CUDA 11.6)
-```
-$ conda install pytorch==1.13.1 torchvision==0.14.1 torchaudio==0.13.1 pytorch-cuda=11.6 -c pytorch -c nvidia
-```
-Clone the repository:
-```
-$ git clone https://github.com/Mda233/Ark.git
-$ cd Ark
-$ pip install -r requirements
-```
+## Pre-trained Ark/Ark+ models
 
-### Setup dataset path
-Modify <PATH_TO_DATASET> in [datasets_config.yaml](./datasets_config.yaml) for each dataset.
-
-(To incorporate a new dataset, refer to the examples provided in datasets_config.yaml. Afterwards, create a corresponding dataloader for the dataset in [dataloader.py](./dataloader.py).)
-
-### Train an Ark model
-```
-# Train Ark-6 with six public datasets
-python main_ark.py --data_set MIMIC --data_set CheXpert 
---data_set ChestXray14 --data_set RSNAPneumonia 
---data_set VinDrCXR --data_set Shenzhen 
---opt sgd --warmup-epochs 20  --lr 0.3 
---batch_size 200 --model swin_base --init imagenet  
---pretrain_epochs 200  --test_epoch 10 
---pretrained_weights https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22kto1k.pth 
---momentum_teacher 0.9  --projector_features 1376  
-
-```
-
-
-## Pre-trained Ark models
-
-You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our paper throught this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
+You can request the pretrained Ark and Ark+ models (the teacher model) in our paper throught this [Google Form](https://forms.gle/qkoDGXNiKRPTDdCe8) or [wjx.cn](https://www.wjx.cn/vm/OvwfYFx.aspx#).
 
 
 ### Load the model
@@ -83,6 +52,8 @@ You can request the pretrained Ark-5 and Ark-6 models (the teacher model) in our
 ```
 model = timm.create_model('swin_base_patch4_window7_224', num_classes=args.num_class, pretrained=False)
 ```
+If you encounter a _size mismatch_ error when loading a pretrained model, please verify the version of the timm package, as later versions have updated the Swin Transformer architectures. 
+
 2. Load the weight:
 ```
 state_dict = torch.load('<PATH_TO_MODEL>/ark6_teacher_ep200_swinb_projector1376_mlp.pth.tar', map_location="cpu")
