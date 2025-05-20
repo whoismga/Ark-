@@ -13,10 +13,8 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 
 [Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
 
-<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels for Superior and Robust Foundation Models </b> <br/>
-[DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
-<sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
-<b>*Medical Image Analysis* (Accepted)</b>
+<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels for Superior and Robust Foundation Models </b> 
+<b>*Medical Image Analysis* (Accepted, to appear in 2025)</b>
 
 
 <b>Foundation Ark: Accruing and Reusing Knowledge for Superior and Robust Performance </b> <br/>
