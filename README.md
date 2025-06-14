@@ -9,11 +9,12 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 <b>A Fully Open AI Foundation Model Applied to Chest Radiography </b> <br/>
 [DongAo Ma](https://www.linkedin.com/in/dongaoma/)<sup>1</sup>, [Jiaxuan Pang](https://www.linkedin.com/in/jiaxuan-pang-b014ab127/)<sup>1</sup>, [Michael B. Gotway](https://www.mayoclinic.org/biographies/gotway-michael-b-m-d/bio-20055566)<sup>2</sup>, [Jianming Liang](https://chs.asu.edu/jianming-liang)<sup>1</sup><br/>
 <sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
-<b>*Nature* (In Press, to appear in 2025)</b>
+<b>*Nature* (2025)</b>
 
-[Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
+[Paper](https://www.nature.com/articles/s41586-025-09079-8) ([PDF](https://rdcu.be/eqx2i), [Supplementary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM1_ESM.pdf), [Peer Review](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM3_ESM.pdf)) | [Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
 
 <b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels for Superior and Robust Foundation Models </b> 
+
 <b>*Medical Image Analysis* (Accepted, to appear in 2025)</b>
 
 
