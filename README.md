@@ -23,7 +23,7 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 <sup>1 </sup>Arizona State University, <sup>2 </sup>Mayo Clinic <br/>
 <b>*International Conference on Medical Image Computing and Computer Assisted Intervention ([MICCAI 2023](https://conferences.miccai.org/2023/en/))*</b> (Oral + Poster)
 
-🏆 [Best Paper Award Runner-up](http://www.miccai.org/about-miccai/awards/best-paper-award-and-young-scientist-award/)
+🏆 [Best Paper Award Runner-up](https://miccai.org/index.php/about-miccai/awards/best-paper-award-and-young-scientist-award/)
 
 ★ [MICCAI 2023 STAR Awards](https://conferences.miccai.org/2023/en/MICCAI-2023-STudent-Author-Registration-(STAR)-Awards.html)
 
