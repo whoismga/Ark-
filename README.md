@@ -47,7 +47,7 @@ You can request the pretrained Ark+ models in our paper throught this [Google Fo
 
 An example of initializing the model and loading the pretrained weights can be found at: [Zeroshot Transfer](https://github.com/jlianglab/Ark/blob/main/Ark_Plus/Zeroshot/Ark%2Bzeroshot-pred.ipynb)
 
-### Load pre-trained weights
+### Load pre-trained encoder for downstream tasks 
 Create Swin Transformer Base/Large model from the [official model](https://github.com/microsoft/Swin-Transformer/blob/main/models/swin_transformer.py) or from [timm (v0.5.4)](https://github.com/huggingface/pytorch-image-models/tree/main#models).
 
 Below is an example of how to load pre-trained weights into the Swin Transformer model:
