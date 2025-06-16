@@ -47,32 +47,52 @@ You can request the pretrained Ark+ models in our paper throught this [Google Fo
 
 An example of initializing the model and loading the pretrained weights can be found at: [Zeroshot Transfer](https://github.com/jlianglab/Ark/blob/main/Ark_Plus/Zeroshot/Ark%2Bzeroshot-pred.ipynb)
 
-### Load the model encoder
-1. Create Swin Transformer Base/Large model from the [official model](https://github.com/microsoft/Swin-Transformer/blob/main/models/swin_transformer.py) or from [timm (v0.5.4)](https://github.com/huggingface/pytorch-image-models/tree/main#models):
-```
+### Load pre-trained weights
+Create Swin Transformer Base/Large model from the [official model](https://github.com/microsoft/Swin-Transformer/blob/main/models/swin_transformer.py) or from [timm (v0.5.4)](https://github.com/huggingface/pytorch-image-models/tree/main#models).
+
+Below is an example of how to load pre-trained weights into the Swin Transformer model:
+
+```python
+import torch
 from timm.models.swin_transformer import SwinTransformer
 
-model = SwinTransformer(num_classes=args.num_class, img_size = 768, patch_size=4, window_size=12, embed_dim=192, depths=(2, 2, 18, 2), num_heads=(6, 12, 24, 48))
-```
-If you encounter a _size mismatch_ error when loading a pretrained model, please verify the version of the timm package, as later versions have updated the Swin Transformer architectures. 
+# Initialize the model
+model = SwinTransformer(
+    num_classes=args.num_class,
+    img_size=768,
+    patch_size=4,
+    window_size=12,
+    embed_dim=192,
+    depths=(2, 2, 18, 2),
+    num_heads=(6, 12, 24, 48)
+)
 
-2. Load the weight:
-```
+# Load the checkpoint
 checkpoint = torch.load('<PATH_TO_MODEL>/Ark6_swinLarge768_ep50.pth.tar', map_location="cpu")
 state_dict = checkpoint['teacher']
-state_dict = {k.replace("module.", ""): v for k, v in state_dict.items() }
 
-k_del = []
-for k in state_dict.keys() + ['head.weight', 'head.bias']:
-    if "attn_mask" in k:
-        k_del.append(k)
-print(f"Removing key {k_del} from pretrained checkpoint for scaled input size")
+# Remove "module." prefix if present
+state_dict = {k.replace("module.", ""): v for k, v in state_dict.items()}
+
+# Identify and delete unnecessary keys
+k_del = [k for k in state_dict.keys() if "attn_mask" in k] + ['head.weight', 'head.bias']
+print(f"Removing key(s) {k_del} from pretrained checkpoint for scaled input size")
+
+# Delete identified keys
 for k in k_del:
-    del state_dict[k]
+    if k in state_dict:  # Ensure the key exists
+        del state_dict[k]
 
+# Load the model weights
 msg = model.load_state_dict(state_dict, strict=False)
-print('Loaded with msg: {}'.format(msg))
+print('Loaded with msg:', msg)
 ```
+
+If you encounter a _size mismatch_ error when loading a pretrained model, please verify the version of the timm package, as later versions have updated the Swin Transformer architectures. 
+
+
+
+
 
 ## Citation
 If you use this code or use our pre-trained weights for your research, please cite our paper:
