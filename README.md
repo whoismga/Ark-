@@ -13,7 +13,8 @@ We develop **Open Foundation Models** from numerous public datasets using their 
 
 [Paper](https://www.nature.com/articles/s41586-025-09079-8) ([PDF](https://rdcu.be/eqx2i), [Supplementary](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM1_ESM.pdf), [Peer Review](https://static-content.springer.com/esm/art%3A10.1038%2Fs41586-025-09079-8/MediaObjects/41586_2025_9079_MOESM3_ESM.pdf)) | [Github](https://github.com/jlianglab/Ark/tree/main/Ark_Plus) | [CodeOcean](https://codeocean.com/capsule/8456055/tree) for Reprodicible Run
 
-<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels for Superior and Robust Foundation Models </b> 
+<b>Ark+: Accruing and Reusing Knowledge from Heterogeneous Labels across Numerous
+Datasets for Training Superior and Robust AI Foundation Models </b> 
 
 <b>*Medical Image Analysis* (Accepted, to appear in 2025)</b>
 
